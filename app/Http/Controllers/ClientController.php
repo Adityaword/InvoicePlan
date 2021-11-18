@@ -29,6 +29,6 @@ class ClientController extends Controller
    function getDetail()
    {
       $client= Clients::all();
-      return view('ClientDetails',[	'client' =>$client ]);
+      return view('ClientDetails',[	'client' =>$client ]); //access
    }
 }
