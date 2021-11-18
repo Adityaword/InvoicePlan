@@ -26,4 +26,9 @@ class ClientController extends Controller
     $client->save();
     echo "Your Data has been submitted";
    }
+   function getDetail()
+   {
+      $client= Clients::all();
+      return view('ClientDetails',[	'client' =>$client ]);
+   }
 }

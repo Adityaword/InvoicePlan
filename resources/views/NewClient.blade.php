@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 	<div class="container">
+		<div></div>
 	<h1>Add Client</h1>
 		<div class="row"> 
 			<div class="col-md-6 col-md-offset-3" style="margin: top 50px;">
