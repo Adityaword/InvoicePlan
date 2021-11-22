@@ -24,11 +24,12 @@ class ClientController extends Controller
     $client ->updated_at= date('Y-m-d H:i:s');
     $client ->created_at= date('Y-m-d H:i:s');
     $client->save();
-    echo "Your Data has been submitted";
+    echo "Your Data has been submitted Successfully !!!";
+    return view('NewClient');
    }
    function getDetail()
-   {
-      $client= Clients::all();
-      return view('ClientDetails',[	'client' =>$client ]);
+   {   $client = DB::select('select * from client');
+      return view('ClientDetails',[	'client'=>$client]);
+  
    }
 }

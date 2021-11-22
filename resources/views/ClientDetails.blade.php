@@ -20,17 +20,15 @@
 
 @foreach ($client as $client)
 <tr>
-<td>$client->id</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><?php echo ($client->id) ?></td>
+<td>{{$client->name}}</td>
+<td><?php echo($client->gender)?></td>
+<td>{{$client->email}}</td>
+<td>{{$client->contact}}</td>
+<td>{{$client->address}}</td>
 </tr>
 @endforeach
 </table>
-<!--<span>
-    {{$client->links()}}
-</span>-->
+
 </body>
 </html>
