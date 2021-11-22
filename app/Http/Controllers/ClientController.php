@@ -14,15 +14,16 @@ class ClientController extends Controller
 
    }
    function addClient(Request $req)
-   {  //return $req ->input();
+   {  return $req ->input();
+      
     $client=new Clients;
     $client->name=$req->clname;
     $client->gender=$req->gender;
     $client->email=$req->email;
     $client->contact=$req->contact;
     $client->address=$req->address;
-    $client ->updated_at= date('Y-m-d H:i:s');
-    $client ->created_at= date('Y-m-d H:i:s');
+    $client->updated_at= date('Y-m-d H:i:s');
+    $client->created_at= date('Y-m-d H:i:s');
     $client->save();
     echo "Your Data has been submitted";
    }
